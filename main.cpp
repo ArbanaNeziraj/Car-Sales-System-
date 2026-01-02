@@ -120,4 +120,32 @@ double CarSalesSystem::applyExtras(double price) {
     return price;
 }
 
+// ==== VAT ====
+double CarSalesSystem::applyVAT(double price) {
+    price += price * 0.18;
+    cout << "VAT (18%) applied.\n";
+    return price;
+}
 
+// ==== PAYMENT ====
+void CarSalesSystem::paymentMethod(double price) {
+    int method;
+
+    cout << "\nPayment Method:\n";
+    cout << "1. Cash\n";
+    cout << "2. Bank (Monthly)\n";
+    cout << "Choice: ";
+    cin >> method;
+
+    if (method == 2) {
+        int months;
+        cout << "Enter months (12 / 24 / 36): ";
+        cin >> months;
+
+        price += price * 0.05;
+        cout << "Final Price (with interest): " << price << " EUR\n";
+        cout << "Monthly Payment: " << price / months << " EUR\n";
+    } else {
+        cout << "Final Price (Cash): " << price << " EUR\n";
+    }
+}
