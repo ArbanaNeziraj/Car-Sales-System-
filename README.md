@@ -22,3 +22,10 @@ Programi u mundëson përdoruesve:
 ## Struktura e Projektit
 - main.cpp – përmban të gjithë logjikën e programit
 - README.md – dokumentacioni i projektit
+
+---
+
+## Si të ekzekutohet projekti
+Klono repository-n:
+git clone https://github.com/ArbanaNeziraj/Car-Sales-System.git
+
